@@ -12,5 +12,12 @@
    ##  int n = Integer.parseInt(sc.nextLine()); 
                                           - took input as string so that \n newline is removed from the input buffer
                                           - check this --> https://www.google.com/search?client=ubuntu-sn&channel=fs&q=why+to+use+nextLine+instead+of+n
+   # ** this is not only for int but also for float, double etc
 
-
+3. Integer class is used to convert the primitive int to an object (know as wrapper class )
+   Example of some useful methods:
+   - Integer.parseInt(String s): Converts a String to a primitive int.
+   - Integer.valueOf(String s): Converts a String to an Integer object.
+   - Integer.toString(int i): Converts an int to a String.
+   - Integer.compare(int x, int y): Compares two int values.
+4.
