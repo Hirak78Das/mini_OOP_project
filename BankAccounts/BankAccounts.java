@@ -50,7 +50,7 @@ public class BankAccounts {
     System.out.println("");
   }
 
-  // deposit money in account
+  // to deposit money in account
   void deposit() {
     System.out.print("");
     System.out.println("Account No : " + this.uid);
@@ -62,6 +62,40 @@ public class BankAccounts {
     System.out.println("Amount Credited Successfully...");
     System.out.println("");
     no_of_transaction++;
+  }
+
+  // to withdraw money from the account
+  void withdraw() {
+    System.out.print("");
+    System.out.println("Account No : " + this.uid);
+    System.out.println("Name : " + this.name);
+    System.out.println("Enter amount to be withdrawn: ₹");
+    double withdraw = Double.parseDouble(sc.nextLine());
+    this.balance = this.balance - withdraw;
+    System.out.println("");
+    System.out.println("Amount Debited Successfully...");
+    System.out.println("");
+    no_of_transaction++;
+  }
+
+  // check balance of any account
+  void checkBalance() {
+    System.out.println("");
+    System.out.println("Account No: " + this.uid);
+    System.out.println("Name : " + this.name);
+    System.out.println("Balance :  ₹" + this.balance);
+  }
+
+  // Change address of any account
+  void changeAddress() {
+    System.out.println("");
+    System.out.println("Account No : " + this.uid);
+    System.out.println("Name : " + this.name);
+    System.out.print("Enter New Address : ");
+    this.address = sc.nextLine();
+    System.out.println("");
+    System.out.println("Address Successfully Changed...");
+    System.out.println("");
   }
 
   public static void main(String args[]) {
@@ -91,6 +125,52 @@ public class BankAccounts {
       System.out.println("");
     }
 
-    int num; // to hold account no. to access or manipulate those accounts
+    int num; // to hold account no. so that we can access or manipulate those accounts
+
+    do {
+      System.out.println("");
+      System.out.println("        MENU FOR ACCOUNT MANIPULATION");
+      System.out.println("   1. Print information of any account");
+      System.out.println("   2. Deposit money to any account");
+      System.out.println("   3. withdraw money from any account ");
+      System.out.println("   4. Change Address of any account");
+      System.out.println("   5. Check Balance ");
+      System.out.println("   6. Exit the program...");
+      System.out.println("       Enter your Choice : ");
+      int choice = Integer.parseInt(sc.nextLine());
+      switch (choice) {
+        case 1:
+          System.out.println("Enter Account No: ");
+          num = Integer.parseInt(sc.nextLine());
+          account[num - 1].display();
+          break;
+        case 2:
+          System.out.println("Enter Account No: ");
+          num = Integer.parseInt(sc.nextLine());
+          account[num - 1].deposit();
+          break;
+        case 3:
+          System.out.println("Enter Account No: ");
+          num = Integer.parseInt(sc.nextLine());
+          account[num - 1].withdraw();
+          break;
+        case 4:
+          System.out.println("Enter Account No: ");
+          num = Integer.parseInt(sc.nextLine());
+          account[num - 1].changeAddress();
+          break;
+        case 5:
+          System.out.println("Enter Account No: ");
+          num = Integer.parseInt(sc.nextLine());
+          account[num - 1].checkBalance();
+          break;
+        case 6:
+          return; // return to the main function
+
+        default:
+          System.out.println("invalid choice!!");
+          break;
+      }
+    } while (true);
   }
 }
