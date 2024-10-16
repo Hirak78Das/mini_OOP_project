@@ -1,11 +1,16 @@
 ## make Bank account for the users 
-1. Basics utilities required to make bank account 
-  - id for each account, it's different for each account
-  - name
-  - address
-  - account type
-  - balance (while creating a bank account we need to deposit a certain amount of money)
+   
+### things that i learned from this project
+1. Data member - includes all kinds of variables(instance variables, static variables, constant/final variables)
+   Instance variables - consists of object variables only
+2. if you wanna take int input from the user, first take the input as string and then convert the string to integer format
+   -- why it's important to do this?
+   --> cuz when we put input from the CLI and then hit enter, a newline '\n' is send to the jvm along with the input.
+   --> this newline is ignored when we take input as an integer and is stored in the input buffer which can be problematic when we take the next input as string
+   --> but when we take input as string, the newline generated while hitting enter will be removed from the input buffer, hence no unexpected output when using string input later.
+   
+   ##  int n = Integer.parseInt(sc.nextLine()); 
+                                          - took input as string so that \n newline is removed from the input buffer
+                                          - check this --> https://www.google.com/search?client=ubuntu-sn&channel=fs&q=why+to+use+nextLine+instead+of+n
 
-  
-  
 
