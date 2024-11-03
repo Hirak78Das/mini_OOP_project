@@ -3,7 +3,7 @@
 public is Accessible from any other class in any package.
 protected is Accessible within the same package and by subclasses in any package.
 default is Accessible only within classes in the same package.
-private is Accessible only within the same class.
+private is Accessible only within the same class. it can be accessed outside the class using public get/set methods
 
 Additional Considerations
 
